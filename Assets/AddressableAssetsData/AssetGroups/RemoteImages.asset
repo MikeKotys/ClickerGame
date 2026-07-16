@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: RemoteImages
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: RemoteImages
+  m_GUID: 8247576cb614e994d90a3f74d2938dbc
+  m_SerializeEntries:
+  - m_GUID: 151e6bce9e8a53d498b7625840ee7106
+    m_Address: GameImage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - GameImage
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e8630b9c9abd3d42a5236e296e02475
+    m_Address: GameImage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - GameImage
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 94e6367d5b22bb54d9b0ae715c29358d
+    m_Address: GameImage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - GameImage
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 4ce9fb40cabb9644da28de337bdb2375, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1a57a9be08a0e92499d77086845c9e8c, type: 2}
+    - {fileID: 11400000, guid: 40a76925ac6de7448bf00d5337d2e856, type: 2}

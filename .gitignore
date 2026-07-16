@@ -5,7 +5,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/
+
 .vs/
 *.csproj
 *.unityproj
