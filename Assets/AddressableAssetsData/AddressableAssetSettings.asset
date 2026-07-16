@@ -15,9 +15,9 @@ MonoBehaviour:
   m_DefaultGroup: 3a2296a54d1569940ad8ebc72564da6f
   m_currentHash:
     serializedVersion: 2
-    Hash: e51fe4177868911a1f8a24c6822099e2
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
   m_InternalIdNamingMode: 0
@@ -52,10 +52,10 @@ MonoBehaviour:
   m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: b65ea54fb7bfb58448d4fded61e0dda3
   m_RemoteCatalogLoadPath:
-    m_Id: 
-  m_ContentStateBuildPathProfileVariableName: 
+    m_Id: 5dc55a7f75c4c6240b27a4e90c9fece0
+  m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
@@ -77,7 +77,7 @@ MonoBehaviour:
       - m_Id: 51749adbae6ef85448a13e1552d3a33d
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: 5dc55a7f75c4c6240b27a4e90c9fece0
-        m_Value: <undefined>
+        m_Value: https://mikekotys.github.io/ClickerGame-CDN/
       - m_Id: 621dac111044cf540bc6800b6151fc7e
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: b65ea54fb7bfb58448d4fded61e0dda3
