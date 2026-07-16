@@ -16,8 +16,15 @@ Test task: a game scene with an object whose textures are loaded asynchronously 
 * **Memory Safety:** Strict Addressables lifecycle. All `AsyncOperationHandle` instances are correctly released on teardown to prevent memory leaks.
 
 ## How to Run
-1. Clone the repository.
-2. Open the project in Unity.
-3. Open the scene Assets/Scenes/Main.unity.
-4. Open the `Addressables Groups` window (Window -> Asset Management -> Addressables -> Groups) and ensure the `Play Mode Script` dropdown is set to **Use Existing Build**. This is required to fetch textures from the actual remote CDN.
-5. Enter Play Mode.
+
+### Option 1: Evaluating Logic in Editor
+1. Clone the repository and open the project in Unity.
+2. Open the `Addressables Groups` window (Window -> Asset Management -> Addressables -> Groups).
+3. Set the `Play Mode Script` dropdown to **Use Asset Database (fastest)**.
+4. Enter Play Mode. 
+*Note: `Library` folder was excluded from version control, therefore the "Use Existing Build" mode will require a new local build. Doing so generates new local hashes that will mismatch the provided CDN files, resulting in 404 errors in the Editor. Use the "Asset Database" mode to evaluate async logic, cancellation tokens, and Zenject architecture.*
+
+### Option 2: Evaluating Remote CDN Delivery (Real Network Test)
+The project is fully configured with a live GitHub Pages CDN. To see the actual network download in action without Editor cache interference:
+1. Open **File -> Build Settings** and click **Build** (Standalone Windows).
+2. Run the executable. The built player uses the pre-configured `StreamingAssets` catalog to successfully fetch asset bundles from the remote server.

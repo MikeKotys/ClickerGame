@@ -19,6 +19,7 @@ namespace ClickerGame
 		private AsyncOperationHandle<Texture2D> FallbackHandle;
 		private AsyncOperationHandle<IList<IResourceLocation>> LocationsHandle;
 		private AsyncOperationHandle<GameObject> PrefabHandle;
+		private GameObject DisplayInstance;
 
 		public async Task InitializeAsync()
 		{
@@ -32,26 +33,38 @@ namespace ClickerGame
 
 		public async Task<GameObject> InstantiateDisplayAsync()
 		{
-			PrefabHandle = Addressables.InstantiateAsync(DisplayPrefabRef);
-			return await PrefabHandle.Task;
+			var handle = Addressables.InstantiateAsync(DisplayPrefabRef);
+			DisplayInstance = await handle.Task;
+			PrefabHandle = handle;
+			return DisplayInstance;
 		}
 
 		public void ReleaseResources()
 		{
+			if (DisplayInstance != null)
+			{
+				Addressables.ReleaseInstance(DisplayInstance);
+				DisplayInstance = null;
+			}
+
 			if (PrefabHandle.IsValid())
 			{
-				Addressables.ReleaseInstance(PrefabHandle);
+				Addressables.Release(PrefabHandle);
 			}
 
 			if (FallbackHandle.IsValid())
 			{
 				Addressables.Release(FallbackHandle);
 			}
-
 			if (LocationsHandle.IsValid())
 			{
 				Addressables.Release(LocationsHandle);
 			}
+		}
+
+		private void OnDestroy()
+		{
+			ReleaseResources();
 		}
 	}
 }
